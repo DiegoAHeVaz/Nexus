@@ -27,6 +27,11 @@ class Home : AppCompatActivity() {
             val intent = Intent(this, Diario::class.java)
             startActivity(intent)
         }
+        val perfil = findViewById<Button>(R.id.perfil)
+        perfil.setOnClickListener {
+            val intent = Intent(this, Perfil::class.java)
+            startActivity(intent)
+        }
 
     }
 }

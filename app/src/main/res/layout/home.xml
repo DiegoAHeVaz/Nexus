@@ -376,6 +376,7 @@
                 android:layout_height="50dp"
                 android:backgroundTint="@android:color/transparent"
                 android:text="asd"
+                android:id="@+id/perfil"
                 android:tint="#FFFFFF" />
 
         </LinearLayout>

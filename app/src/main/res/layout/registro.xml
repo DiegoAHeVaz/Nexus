@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Nombre"
-            android:textColorHint="android:textColor=@color/white"
+            android:textColorHint="@android:color/white"
             android:textColor="@color/white"
             android:fontFamily="@font/capriola"
             android:inputType="textPersonName"/>
@@ -43,7 +43,7 @@
             android:layout_height="50dp"
             android:hint="Correo electrónico"
             android:textColor="@color/white"
-            android:textColorHint="android:textColor=@color/white"
+            android:textColorHint="@android:color/white"
             android:inputType="textEmailAddress"/>
 
         <!-- Campo de contraseña -->
@@ -53,7 +53,7 @@
             android:fontFamily="@font/capriola"
             android:layout_height="50dp"
             android:hint="Contraseña"
-            android:textColorHint="android:textColor=@color/white"
+            android:textColorHint="@android:color/white"
             android:textColor="@color/white"
             android:inputType="textPassword"/>
 

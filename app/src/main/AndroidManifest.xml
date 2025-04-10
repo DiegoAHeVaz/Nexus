@@ -54,6 +54,10 @@
             android:name=".Diario"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".Perfil"
+            android:exported="true">
+        </activity>
 
     </application>
 
