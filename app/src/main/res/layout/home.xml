@@ -1,10 +1,395 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    tools:context=".Home"
-    android:id="@+id/home"
-    >
+    android:layout_height="match_parent">
 
+    <!-- Aquí va todo tu contenido, como el ScrollView que ya tienes -->
+
+    <!-- Barra de navegación inferior -->
+    <ScrollView
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNavigation"
+        android:layout_marginBottom="-2dp"
+        android:background="#8D39E7">
+
+        <!-- Incluye aquí el contenido que ya tenías (LinearLayout con todo lo de NEXUS) -->
+        <?xml version="1.0" encoding="utf-8"?>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            tools:context=".MainActivity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <!-- Diario inteligente -->
+                <TextView
+                    android:id="@+id/titleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/title_background"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:paddingBottom="24dp"
+                    android:shadowColor="#4B0082"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="3"
+                    android:text="BIENVENIDO A TU ALIADO EDUCATIVO NEXUS"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <!-- Misiones diarias con scroll horizontal -->
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="git init" />
+
+                <LinearLayout
+                    android:layout_width="387dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="24dp"
+                    android:background="#EDE7F6"
+                    android:backgroundTint="#EDE7F6"
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:background="@drawable/title_background"
+                        android:elevation="4dp"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:shadowColor="#4B0082"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="3"
+                        android:text="DIARIO INTELIGENTE"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="8dp"
+                        android:background="#F0F0F0"
+                        android:cornerRadius="8dp"
+                        android:elevation="2dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="4dp"
+                        android:padding="16dp"
+                        android:text="Registra pensamientos, emociones y actividades para reflexionar y crecer"
+                        android:textColor="#555555"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="MISIONES DIARIAS"
+                    android:textColor="#4B0082"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="always"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingEnd="16dp">
+
+                        <!-- Misión 1 -->
+                        <LinearLayout
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="12dp"
+                            android:background="#D1C4E9"
+                            android:elevation="4dp"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Misión: Planifica tu semana"
+                                android:textColor="#000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="→ Usa el calendario para organizar tus tareas. Marca al menos 3 eventos importantes." />
+                        </LinearLayout>
+
+                        <!-- Misión 2 -->
+                        <LinearLayout
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="12dp"
+                            android:background="#D1C4E9"
+                            android:elevation="4dp"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Misión: Técnica Pomodoro"
+                                android:textColor="#000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="→ Haz una sesión de 25 minutos de estudio sin distracciones. Toca 'Iniciar' para comenzar." />
+                        </LinearLayout>
+
+                        <!-- Misión 3 -->
+                        <LinearLayout
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="12dp"
+                            android:background="#D1C4E9"
+                            android:elevation="4dp"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Misión: Respirar y pausar"
+                                android:textColor="#000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="→ Tómate 5 minutos para respirar y escribir cómo te sientes en tu diario." />
+                        </LinearLayout>
+
+                        <!-- Misión 4 -->
+                        <LinearLayout
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="12dp"
+                            android:background="#D1C4E9"
+                            android:elevation="4dp"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Misión: Desafío sin tecnología"
+                                android:textColor="#000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="→ Desconéctate de redes sociales por 1 hora y usa ese tiempo para leer o descansar." />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+                <!-- Calendario adaptativo -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:background="#EDE7F6"
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CALENDARIO ADAPTATIVO"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/title_background"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:elevation="4dp"
+                        android:shadowColor="#4B0082"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="Organiza tus días con recordatorios que se ajustan a tu ritmo y estilo."
+                        android:textColor="#555"
+                        android:textSize="16sp"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@drawable/description_background"
+                        android:padding="12dp"
+                        android:elevation="2dp"
+                        android:cornerRadius="8dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Puedes pegar directamente tu ScrollView aquí -->
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#4B0082"
+        android:weightSum="5"
+        android:elevation="8dp">
+
+        <!-- INICIO -->
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="4dp">
+
+            <ImageView
+                android:src="@android:drawable/ic_menu_view"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:tint="#FFFFFF" />
+
+            <TextView
+                android:text="Inicio"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <!-- DIARIO -->
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="4dp">
+
+            <ImageView
+                android:src="@android:drawable/ic_menu_edit"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:tint="#FFFFFF" />
+
+            <TextView
+                android:text="Diario"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <!-- IA (Chatbot) -->
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="4dp">
+
+            <ImageView
+                android:src="@android:drawable/ic_menu_send"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:tint="#FFFFFF" />
+
+            <TextView
+                android:text="IA"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <!-- CALENDARIO -->
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="4dp">
+
+            <ImageView
+                android:src="@android:drawable/ic_menu_month"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:tint="#FFFFFF" />
+
+            <TextView
+                android:text="Calendario"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <!-- PERFIL -->
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="4dp">
+
+            <ImageView
+                android:src="@android:drawable/ic_menu_myplaces"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:tint="#FFFFFF" />
+
+            <TextView
+                android:text="Perfil"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>
+
