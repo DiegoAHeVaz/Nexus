@@ -1,9 +1,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".Home"
+    android:backgroundTint="#4B0082"
+    >
 
-    <!-- Aquí va todo tu contenido, como el ScrollView que ya tienes -->
 
     <!-- Barra de navegación inferior -->
     <ScrollView
@@ -12,10 +14,8 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/bottomNavigation"
         android:layout_marginBottom="-2dp"
-        android:background="#8D39E7">
+        >
 
-        <!-- Incluye aquí el contenido que ya tenías (LinearLayout con todo lo de NEXUS) -->
-        <?xml version="1.0" encoding="utf-8"?>
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -23,6 +23,7 @@
             tools:context=".MainActivity">
 
             <LinearLayout
+                android:background="#4B0082"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -37,6 +38,7 @@
                     android:layout_marginTop="32dp"
                     android:background="@drawable/title_background"
                     android:elevation="4dp"
+                    android:fontFamily="@font/capriola"
                     android:gravity="center"
                     android:paddingBottom="24dp"
                     android:shadowColor="#4B0082"
@@ -48,12 +50,6 @@
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
-                <!-- Misiones diarias con scroll horizontal -->
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="git init" />
 
                 <LinearLayout
                     android:layout_width="387dp"
@@ -74,7 +70,7 @@
                         android:elevation="4dp"
                         android:gravity="center"
                         android:padding="16dp"
-                        android:shadowColor="#4B0082"
+                        android:shadowColor="#4B0082"  android:fontFamily="@font/capriola"
                         android:shadowDx="2"
                         android:shadowDy="2"
                         android:shadowRadius="3"
@@ -89,9 +85,8 @@
                         android:layout_marginHorizontal="16dp"
                         android:layout_marginTop="8dp"
                         android:background="#F0F0F0"
-                        android:cornerRadius="8dp"
                         android:elevation="2dp"
-                        android:gravity="center"
+                        android:gravity="center"  android:fontFamily="@font/capriola"
                         android:lineSpacingExtra="4dp"
                         android:padding="16dp"
                         android:text="Registra pensamientos, emociones y actividades para reflexionar y crecer"
@@ -106,7 +101,8 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
                     android:text="MISIONES DIARIAS"
-                    android:textColor="#4B0082"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/capriola"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -134,6 +130,7 @@
                             android:padding="16dp">
 
                             <TextView
+                                android:fontFamily="@font/capriola"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Misión: Planifica tu semana"
@@ -144,6 +141,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
+                                android:fontFamily="@font/capriola"
                                 android:text="→ Usa el calendario para organizar tus tareas. Marca al menos 3 eventos importantes." />
                         </LinearLayout>
 
@@ -155,18 +153,18 @@
                             android:layout_marginEnd="12dp"
                             android:background="#D1C4E9"
                             android:elevation="4dp"
-                            android:orientation="vertical"
+                            android:orientation="vertical"  android:fontFamily="@font/capriola"
                             android:padding="16dp">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Misión: Técnica Pomodoro"
-                                android:textColor="#000"
+                                android:textColor="#000"  android:fontFamily="@font/capriola"
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="wrap_content"  android:fontFamily="@font/capriola"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
                                 android:text="→ Haz una sesión de 25 minutos de estudio sin distracciones. Toca 'Iniciar' para comenzar." />
@@ -178,13 +176,13 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginEnd="12dp"
-                            android:background="#D1C4E9"
+                            android:background="#D1C4E9"  android:fontFamily="@font/capriola"
                             android:elevation="4dp"
                             android:orientation="vertical"
                             android:padding="16dp">
 
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="wrap_content"  android:fontFamily="@font/capriola"
                                 android:layout_height="wrap_content"
                                 android:text="Misión: Respirar y pausar"
                                 android:textColor="#000"
@@ -192,7 +190,7 @@
 
                             <TextView
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_height="wrap_content"  android:fontFamily="@font/capriola"
                                 android:layout_marginTop="4dp"
                                 android:text="→ Tómate 5 minutos para respirar y escribir cómo te sientes en tu diario." />
                         </LinearLayout>
@@ -203,7 +201,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginEnd="12dp"
-                            android:background="#D1C4E9"
+                            android:background="#D1C4E9"  android:fontFamily="@font/capriola"
                             android:elevation="4dp"
                             android:orientation="vertical"
                             android:padding="16dp">
@@ -211,14 +209,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Misión: Desafío sin tecnología"
+                                android:text="Misión: Desafío sin tecnología"  android:fontFamily="@font/capriola"
                                 android:textColor="#000"
                                 android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
+                                android:layout_marginTop="4dp"  android:fontFamily="@font/capriola"
                                 android:text="→ Desconéctate de redes sociales por 1 hora y usa ese tiempo para leer o descansar." />
                         </LinearLayout>
 
@@ -240,7 +238,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="CALENDARIO ADAPTATIVO"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#FFFFFF"  android:fontFamily="@font/capriola"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:layout_marginTop="16dp"
@@ -258,15 +256,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="16dp"  android:fontFamily="@font/capriola"
                         android:text="Organiza tus días con recordatorios que se ajustan a tu ritmo y estilo."
                         android:textColor="#555"
                         android:textSize="16sp"
                         android:layout_marginHorizontal="16dp"
                         android:background="@drawable/description_background"
                         android:padding="12dp"
-                        android:elevation="2dp"
-                        android:cornerRadius="8dp" />
+                        android:elevation="2dp" />
 
                 </LinearLayout>
 
@@ -295,16 +292,14 @@
             android:gravity="center"
             android:padding="4dp">
 
-            <ImageView
-                android:src="@android:drawable/ic_menu_view"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+            <Button
+                android:drawableBottom="@android:drawable/ic_menu_view"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="asd"  android:fontFamily="@font/capriola"
+                android:backgroundTint="@android:color/transparent"
                 android:tint="#FFFFFF" />
 
-            <TextView
-                android:text="Inicio"
-                android:textColor="#FFFFFF"
-                android:textSize="10sp" />
         </LinearLayout>
 
         <!-- DIARIO -->
@@ -313,19 +308,17 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="center"
+            android:gravity="center"  android:fontFamily="@font/capriola"
             android:padding="4dp">
 
-            <ImageView
-                android:src="@android:drawable/ic_menu_edit"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+            <Button
+                android:drawableBottom="@android:drawable/ic_menu_edit"
+                android:layout_width="50dp"
+                android:layout_height="50dp"  android:fontFamily="@font/capriola"
+                android:id="@+id/diario"
+                android:text="asd"
+                android:backgroundTint="@android:color/transparent"
                 android:tint="#FFFFFF" />
-
-            <TextView
-                android:text="Diario"
-                android:textColor="#FFFFFF"
-                android:textSize="10sp" />
         </LinearLayout>
 
         <!-- IA (Chatbot) -->
@@ -337,16 +330,15 @@
             android:gravity="center"
             android:padding="4dp">
 
-            <ImageView
-                android:src="@android:drawable/ic_menu_send"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+            <Button
+                android:drawableBottom="@android:drawable/sym_action_chat"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/chat"
+                android:text="asd"  android:fontFamily="@font/capriola"
+                android:backgroundTint="@android:color/transparent"
                 android:tint="#FFFFFF" />
 
-            <TextView
-                android:text="IA"
-                android:textColor="#FFFFFF"
-                android:textSize="10sp" />
         </LinearLayout>
 
         <!-- CALENDARIO -->
@@ -358,16 +350,15 @@
             android:gravity="center"
             android:padding="4dp">
 
-            <ImageView
-                android:src="@android:drawable/ic_menu_month"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+            <Button
+                android:drawableBottom="@android:drawable/ic_menu_month"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/calendario"
+                android:text="asd"  android:fontFamily="@font/capriola"
+                android:backgroundTint="@android:color/transparent"
                 android:tint="#FFFFFF" />
 
-            <TextView
-                android:text="Calendario"
-                android:textColor="#FFFFFF"
-                android:textSize="10sp" />
         </LinearLayout>
 
         <!-- PERFIL -->
@@ -379,16 +370,14 @@
             android:gravity="center"
             android:padding="4dp">
 
-            <ImageView
-                android:src="@android:drawable/ic_menu_myplaces"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+            <Button
+                android:drawableBottom="@android:drawable/ic_menu_myplaces"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@android:color/transparent"
+                android:text="asd"
                 android:tint="#FFFFFF" />
 
-            <TextView
-                android:text="Perfil"
-                android:textColor="#FFFFFF"
-                android:textSize="10sp" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

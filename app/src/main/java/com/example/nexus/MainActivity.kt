@@ -1,8 +1,8 @@
 package com.example.nexus
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -31,13 +31,36 @@ class MainActivity : AppCompatActivity() {
         loginbtn = findViewById(R.id.login_btn)
         regisbtn = findViewById(R.id.registro_btn)
 
+        // Verificar si los datos están guardados en SharedPreferences
+        val sharedPreferences: SharedPreferences = getSharedPreferences("userPrefs", MODE_PRIVATE)
+        val savedEmail = sharedPreferences.getString("userEmail", null)
+        val savedPassword = sharedPreferences.getString("userPassword", null)
+
+        // Si los datos están guardados, realizar login con esos datos
+        if (savedEmail != null && savedPassword != null) {
+            usernameInput.setText(savedEmail)
+            passwordInput.setText(savedPassword)
+            Toast.makeText(this, "Datos de usuario guardados, por favor inicia sesión", Toast.LENGTH_SHORT).show()
+        }
+
+        regisbtn.setOnClickListener {
+            val intent = Intent(this, Registro::class.java)
+            startActivity(intent)
+        }
+
         loginbtn.setOnClickListener {
             val email = usernameInput.text.toString().trim()
             val password = passwordInput.text.toString().trim()
 
-            if (email == predefinedEmail && password == predefinedPassword) {
+            // Primero, intenta login con los datos guardados en SharedPreferences
+            if (savedEmail != null && savedPassword != null && email == savedEmail && password == savedPassword) {
                 loginUser(email, password)
-            } else {
+            }
+            // Si no es exitoso, verifica con los datos predefinidos
+            else if (email == predefinedEmail && password == predefinedPassword) {
+                loginUser(email, password)
+            }
+            else {
                 Toast.makeText(this, "Correo electrónico o contraseña incorrectos", Toast.LENGTH_SHORT).show()
             }
         }
@@ -47,16 +70,12 @@ class MainActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    Log.i("Auth", "Inicio de sesión exitoso")
                     val user = auth.currentUser
-                    Log.i("Auth", "Usuario autenticado: ${user?.email}")
-
                     val intent = Intent(this, Home::class.java)
                     startActivity(intent)
                     finish()
                 } else {
-                    Log.e("Auth", "Error de autenticación: ${task.exception?.message}")
-                    Toast.makeText(this, "Error: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Error de autenticación: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
                 }
             }
     }

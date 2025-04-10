@@ -49,6 +49,9 @@ dependencies {
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.firestore.ktx)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation(libs.okhttp)
+    implementation(libs.play.services.auth)
+    implementation(libs.play.services.location)
+
 
 }

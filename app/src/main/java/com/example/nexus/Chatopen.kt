@@ -1,5 +1,6 @@
 package com.example.nexus
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -7,6 +8,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
@@ -22,12 +24,18 @@ class Chatopen : AppCompatActivity() {
 
     // Historial de la conversación
     private val messages = mutableListOf<Map<String, String>>(
-        mapOf("role" to "system", "content" to "Eres un asistente llamado Aura, muy amigable, curioso y siempre dispuesto a ayudar.")
+        mapOf("role" to "system", "content" to "Eres un asistente llamado Mindy, muy amigable, curioso y siempre dispuesto a ayudar.")
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.chatopen)
+
+        val boton = findViewById<Button>(R.id.regreso)
+        boton.setOnClickListener {
+            val intent = Intent(this, Home::class.java)
+            startActivity(intent)
+        }
 
         inputText = findViewById(R.id.inputText)
         sendButton = findViewById(R.id.sendButton)
@@ -45,7 +53,7 @@ class Chatopen : AppCompatActivity() {
                 // Enviar a ChatGPT
                 askChatGPT { reply ->
                     runOnUiThread {
-                        responseText.append("\nAura: $reply")
+                        responseText.append("\nMindy: $reply")
                     }
                 }
 
@@ -71,7 +79,7 @@ class Chatopen : AppCompatActivity() {
         json.put("model", "gpt-3.5-turbo")
         json.put("messages", jsonMessages)
 
-        val body = RequestBody.create("application/json".toMediaTypeOrNull(), json.toString())
+        val body = json.toString().toRequestBody("application/json".toMediaTypeOrNull())
 
         val request = Request.Builder()
             .url(url)

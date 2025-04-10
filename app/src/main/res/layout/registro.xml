@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="#4B0082"
     android:scrollbars="vertical"
     tools:context=".Registro">
 
@@ -19,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Registro"
+            android:textColor="@color/white"
             android:fontFamily="@font/capriola"
             android:textSize="18dp"
             />
@@ -28,6 +30,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Nombre"
+            android:textColorHint="android:textColor=@color/white"
+            android:textColor="@color/white"
             android:fontFamily="@font/capriola"
             android:inputType="textPersonName"/>
 
@@ -38,6 +42,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Correo electrónico"
+            android:textColor="@color/white"
+            android:textColorHint="android:textColor=@color/white"
             android:inputType="textEmailAddress"/>
 
         <!-- Campo de contraseña -->
@@ -47,6 +53,8 @@
             android:fontFamily="@font/capriola"
             android:layout_height="50dp"
             android:hint="Contraseña"
+            android:textColorHint="android:textColor=@color/white"
+            android:textColor="@color/white"
             android:inputType="textPassword"/>
 
         <!-- ¿Te han diagnosticado alguna condición? -->
@@ -56,6 +64,7 @@
             android:layout_width="wrap_content"
             android:fontFamily="@font/capriola"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:text="¿Te han diagnosticado alguna condición como TDAH, ansiedad, dislexia u otra?"
             android:textSize="18sp"
             android:layout_marginBottom="8dp"/>
@@ -73,6 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sí"
+                android:textColor="@color/white"
                 android:layout_marginBottom="4dp"/>
 
             <RadioButton
@@ -81,6 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No"
+                android:textColor="@color/white"
                 android:layout_marginBottom="4dp"/>
 
             <RadioButton
@@ -88,6 +99,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/capriola"
+                android:textColor="@color/white"
                 android:text="Prefiero no responder"
                 android:layout_marginBottom="16dp"/>
         </RadioGroup>
@@ -97,6 +109,7 @@
             android:id="@+id/textConcentration"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:fontFamily="@font/capriola"
             android:text="¿En qué momentos te cuesta más concentrarte?"
             android:textSize="18sp"
@@ -106,6 +119,7 @@
             android:id="@+id/radioGroupConcentration"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:orientation="vertical"
             android:layout_marginBottom="16dp">
 
@@ -113,6 +127,7 @@
                 android:id="@+id/radioStartTask"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:text="Al empezar tareas nuevas"
                 android:fontFamily="@font/capriola"
                 android:layout_marginBottom="4dp"/>
@@ -121,6 +136,7 @@
                 android:id="@+id/radioLongTasks"
                 android:layout_width="wrap_content"
                 android:fontFamily="@font/capriola"
+                android:textColor="@color/white"
                 android:layout_height="wrap_content"
                 android:text="Durante actividades largas"
                 android:layout_marginBottom="4dp"/>
@@ -130,6 +146,7 @@
                 android:fontFamily="@font/capriola"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:text="Cuando hay ruido o distracciones"
                 android:layout_marginBottom="4dp"/>
 
@@ -139,12 +156,14 @@
                 android:fontFamily="@font/capriola"
                 android:layout_height="wrap_content"
                 android:text="Cuando estoy cansado o estresado"
+                android:textColor="@color/white"
                 android:layout_marginBottom="4dp"/>
 
             <RadioButton
                 android:id="@+id/radioOtherConcentration"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:text="Otro (especificar)"
                 android:fontFamily="@font/capriola"
                 android:layout_marginBottom="16dp"/>
@@ -154,6 +173,7 @@
         <TextView
             android:id="@+id/textImproveWithNexus"
             android:layout_width="wrap_content"
+            android:textColor="@color/white"
             android:layout_height="wrap_content"
             android:fontFamily="@font/capriola"
             android:text="¿Qué te gustaría mejorar con la ayuda de NEXUS?"
@@ -164,12 +184,14 @@
             android:id="@+id/radioGroupImproveWithNexus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:orientation="vertical"
             android:layout_marginBottom="16dp">
 
             <RadioButton
                 android:id="@+id/radioConcentration"
                 android:layout_width="wrap_content"
+                android:textColor="@color/white"
                 android:fontFamily="@font/capriola"
                 android:layout_height="wrap_content"
                 android:text="Mejorar mi capacidad de concentración"
@@ -179,6 +201,7 @@
                 android:id="@+id/radioTimeManagement"
                 android:layout_width="wrap_content"
                 android:fontFamily="@font/capriola"
+                android:textColor="@color/white"
                 android:layout_height="wrap_content"
                 android:text="Manejar mi tiempo de manera más efectiva"
                 android:layout_marginBottom="4dp"/>
@@ -188,6 +211,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/capriola"
+                android:textColor="@color/white"
                 android:text="Reducir el estrés o ansiedad"
                 android:layout_marginBottom="4dp"/>
 
@@ -196,6 +220,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/capriola"
+                android:textColor="@color/white"
                 android:text="Organizar mis tareas de manera más eficiente"
                 android:layout_marginBottom="4dp"/>
 
@@ -204,6 +229,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/capriola"
+                android:textColor="@color/white"
                 android:text="Otro (especificar)"
                 android:layout_marginBottom="16dp"/>
         </RadioGroup>
@@ -214,6 +240,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/capriola"
+            android:textColor="@color/white"
             android:text="¿Qué tanto te afecta el uso del celular o redes sociales cuando intentas concentrarte?"
             android:textSize="18sp"
             android:layout_marginBottom="8dp"/>
@@ -222,6 +249,7 @@
             android:id="@+id/radioGroupCellphoneImpact"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:orientation="vertical"
             android:layout_marginBottom="16dp">
 
@@ -231,6 +259,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/capriola"
                 android:text="Mucho, me distraigo constantemente"
+                android:textColor="@color/white"
                 android:layout_marginBottom="4dp"/>
 
             <RadioButton
@@ -238,6 +267,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/capriola"
+                android:textColor="@color/white"
                 android:text="Algo, pero puedo controlarlo"
                 android:layout_marginBottom="4dp"/>
 
@@ -246,6 +276,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/capriola"
+                android:textColor="@color/white"
                 android:text="Poco, no me afecta mucho"
                 android:layout_marginBottom="4dp"/>
 
@@ -254,6 +285,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/capriola"
+                android:textColor="@color/white"
                 android:text="Nada, puedo concentrarme bien"
                 android:layout_marginBottom="16dp"/>
         </RadioGroup>
@@ -264,6 +296,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Registrar"
+            android:textColor="@color/white"
             android:layout_marginTop="16dp"/>
 
     </LinearLayout>
