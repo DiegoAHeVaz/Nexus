@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.nexus"
     >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"
+        tools:ignore="CoarseFineLocation" />
+
 
     <application
         android:allowBackup="true"
@@ -14,6 +20,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nexus"
         >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -34,6 +44,14 @@
 
         <activity
             android:name=".Chatopen"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Calendario"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Diario"
             android:exported="true">
         </activity>
 
