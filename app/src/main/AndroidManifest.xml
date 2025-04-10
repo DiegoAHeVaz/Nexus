@@ -25,6 +25,10 @@
             android:name=".Home"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".Registro"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>

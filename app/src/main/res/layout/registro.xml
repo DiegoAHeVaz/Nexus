@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:scrollbars="vertical"
+    tools:context=".Registro">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registro"
+            android:fontFamily="@font/capriola"
+            android:textSize="18dp"
+            />
+        <!-- Campo de nombre -->
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Nombre"
+            android:fontFamily="@font/capriola"
+            android:inputType="textPersonName"/>
+
+        <!-- Campo de correo electrónico -->
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:fontFamily="@font/capriola"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Correo electrónico"
+            android:inputType="textEmailAddress"/>
+
+        <!-- Campo de contraseña -->
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/capriola"
+            android:layout_height="50dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"/>
+
+        <!-- ¿Te han diagnosticado alguna condición? -->
+        <TextView
+            android:paddingTop="10sp"
+            android:id="@+id/textDiagnosis"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/capriola"
+            android:layout_height="wrap_content"
+            android:text="¿Te han diagnosticado alguna condición como TDAH, ansiedad, dislexia u otra?"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupDiagnosis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/radioYes"
+                android:fontFamily="@font/capriola"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sí"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/radioNo"
+                android:fontFamily="@font/capriola"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/radioPreferNotToAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/capriola"
+                android:text="Prefiero no responder"
+                android:layout_marginBottom="16dp"/>
+        </RadioGroup>
+
+        <!-- ¿En qué momentos te cuesta más concentrarte? -->
+        <TextView
+            android:id="@+id/textConcentration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/capriola"
+            android:text="¿En qué momentos te cuesta más concentrarte?"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupConcentration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/radioStartTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Al empezar tareas nuevas"
+                android:fontFamily="@font/capriola"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/radioLongTasks"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/capriola"
+                android:layout_height="wrap_content"
+                android:text="Durante actividades largas"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/radioDistractions"
+                android:fontFamily="@font/capriola"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cuando hay ruido o distracciones"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/radioTiredOrStressed"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/capriola"
+                android:layout_height="wrap_content"
+                android:text="Cuando estoy cansado o estresado"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/radioOtherConcentration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Otro (especificar)"
+                android:fontFamily="@font/capriola"
+                android:layout_marginBottom="16dp"/>
+        </RadioGroup>
+
+        <!-- ¿Qué te gustaría mejorar con la ayuda de NEXUS? -->
+        <TextView
+            android:id="@+id/textImproveWithNexus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/capriola"
+            android:text="¿Qué te gustaría mejorar con la ayuda de NEXUS?"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupImproveWithNexus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/radioConcentration"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/capriola"
+                android:layout_height="wrap_content"
+                android:text="Mejorar mi capacidad de concentración"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/radioTimeManagement"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/capriola"
+                android:layout_height="wrap_content"
+                android:text="Manejar mi tiempo de manera más efectiva"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/radioReduceStress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/capriola"
+                android:text="Reducir el estrés o ansiedad"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/radioOrganizeTasks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/capriola"
+                android:text="Organizar mis tareas de manera más eficiente"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/radioOtherImprove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/capriola"
+                android:text="Otro (especificar)"
+                android:layout_marginBottom="16dp"/>
+        </RadioGroup>
+
+        <!-- ¿Qué tanto te afecta el uso del celular o redes sociales cuando intentas concentrarte? -->
+        <TextView
+            android:id="@+id/textCellphoneImpact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/capriola"
+            android:text="¿Qué tanto te afecta el uso del celular o redes sociales cuando intentas concentrarte?"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupCellphoneImpact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/radioCellphoneMuch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/capriola"
+                android:text="Mucho, me distraigo constantemente"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/radioCellphoneSome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/capriola"
+                android:text="Algo, pero puedo controlarlo"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/radioCellphoneLittle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/capriola"
+                android:text="Poco, no me afecta mucho"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/radioCellphoneNotAtAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/capriola"
+                android:text="Nada, puedo concentrarme bien"
+                android:layout_marginBottom="16dp"/>
+        </RadioGroup>
+
+        <!-- Botón de registro -->
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

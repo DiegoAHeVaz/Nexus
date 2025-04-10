@@ -37,7 +37,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -48,5 +47,6 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
+    implementation(libs.firebase.firestore.ktx)
     androidTestImplementation(libs.androidx.espresso.core)
 }
