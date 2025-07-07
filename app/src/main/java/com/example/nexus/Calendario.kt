@@ -12,7 +12,7 @@ class Calendario : AppCompatActivity() {
     private lateinit var calendarView: CalendarView
     private lateinit var selectedDate: TextView
 
-    // Mapa para guardar notas por fecha
+
     private val notesMap = mutableMapOf<String, String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +32,7 @@ class Calendario : AppCompatActivity() {
             val dateKey = "$dayOfMonth/${month + 1}/$year"
             selectedDate.text = "Fecha seleccionada: $dateKey"
 
-            // Si ya hay nota, mostrarla
+
             if (notesMap.containsKey(dateKey)) {
                 showNoteDialog(dateKey, notesMap[dateKey])
             } else {

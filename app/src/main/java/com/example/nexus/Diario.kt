@@ -1,7 +1,10 @@
 package com.example.nexus
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
@@ -19,11 +22,27 @@ class Diario : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.diario)
 
+        val regreso = findViewById<Button>(R.id.regreso)
+        regreso.setOnClickListener {
+            val intent = Intent(this, Home::class.java)
+            startActivity(intent)
+        }
+
         entryEditText = findViewById(R.id.entryEditText)
         saveButton = findViewById(R.id.saveButton)
         entryListView = findViewById(R.id.entryListView)
+        adapter = object : ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, entries) {
+            override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+                val view = super.getView(position, convertView, parent)
+                val textView = view.findViewById<TextView>(android.R.id.text1)
 
-        adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, entries)
+
+                textView.setTextColor(resources.getColor(android.R.color.white))
+
+                return view
+            }
+        }
+
         entryListView.adapter = adapter
 
         loadEntries()

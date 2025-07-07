@@ -16,15 +16,14 @@ import java.io.IOException
 class Chatopen : AppCompatActivity() {
 
     private val client = OkHttpClient()
-    private val apiKey = "tu_api_key_aquí" // Reemplaza con tu API key real
+    private val apiKey = "" //Aqui agregar la api de openai chatgpt -3.5 turbo
 
-    private lateinit var inputText: EditText
+        private lateinit var inputText: EditText
     private lateinit var sendButton: Button
     private lateinit var responseText: TextView
 
-    // Historial de la conversación
     private val messages = mutableListOf<Map<String, String>>(
-        mapOf("role" to "system", "content" to "Eres un asistente llamado Mindy, muy amigable, curioso y siempre dispuesto a ayudar.")
+        mapOf("role" to "system", "content" to "Eres un asistente llamado Mindy, muy amigable, curioso y siempre dispuesto a ayudar, te contactaremos para ser un apoyo para alunmos o jovenes con tda tdah y toc, no exigiras cambios acompañaras en ellos, no te basaras en castigos o listas rigidas, te debes de adaptar al usuario y no el a ti, genera consejos breves dinamicos y positivos, da recordatorios amigables y seguimiento diario, analiza el ritmo de usuario y su comportamiento para definir tareas ajustadas a el, todo esto con una forma de comunicacion educativa  .")
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,20 +43,17 @@ class Chatopen : AppCompatActivity() {
         sendButton.setOnClickListener {
             val userInput = inputText.text.toString().trim()
             if (userInput.isNotEmpty()) {
-                // Mostrar el mensaje del usuario en pantalla
+
                 responseText.append("\n\nTú: $userInput")
 
-                // Agregarlo al historial
                 messages.add(mapOf("role" to "user", "content" to userInput))
 
-                // Enviar a ChatGPT
                 askChatGPT { reply ->
                     runOnUiThread {
                         responseText.append("\nMindy: $reply")
                     }
                 }
 
-                // Limpiar campo de entrada
                 inputText.text.clear()
             }
         }
@@ -66,7 +62,6 @@ class Chatopen : AppCompatActivity() {
     private fun askChatGPT(callback: (String) -> Unit) {
         val url = "https://api.openai.com/v1/chat/completions"
 
-        // Convertir historial a JSONArray
         val jsonMessages = JSONArray()
         for (msg in messages) {
             val messageObject = JSONObject()
@@ -98,18 +93,15 @@ class Chatopen : AppCompatActivity() {
                 try {
                     val jsonObject = JSONObject(responseBody)
 
-                    // Verificar si hay un campo de error
                     if (jsonObject.has("error")) {
                         val errorMessage = jsonObject.getJSONObject("error").getString("message")
                         callback("Error de la API: $errorMessage")
                         return
                     }
 
-                    // Si no hay errores, obtener la respuesta de la IA
                     val choices = jsonObject.getJSONArray("choices")
                     val reply = choices.getJSONObject(0).getJSONObject("message").getString("content")
 
-                    // Agregar al historial
                     messages.add(mapOf("role" to "assistant", "content" to reply))
                     callback(reply.trim())
 

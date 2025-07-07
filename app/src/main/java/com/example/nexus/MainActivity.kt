@@ -31,12 +31,12 @@ class MainActivity : AppCompatActivity() {
         loginbtn = findViewById(R.id.login_btn)
         regisbtn = findViewById(R.id.registro_btn)
 
-        // Verificar si los datos están guardados en SharedPreferences
+
         val sharedPreferences: SharedPreferences = getSharedPreferences("userPrefs", MODE_PRIVATE)
         val savedEmail = sharedPreferences.getString("userEmail", null)
         val savedPassword = sharedPreferences.getString("userPassword", null)
 
-        // Si los datos están guardados, realizar login con esos datos
+
         if (savedEmail != null && savedPassword != null) {
             usernameInput.setText(savedEmail)
             passwordInput.setText(savedPassword)
@@ -52,11 +52,10 @@ class MainActivity : AppCompatActivity() {
             val email = usernameInput.text.toString().trim()
             val password = passwordInput.text.toString().trim()
 
-            // Primero, intenta login con los datos guardados en SharedPreferences
             if (savedEmail != null && savedPassword != null && email == savedEmail && password == savedPassword) {
                 loginUser(email, password)
             }
-            // Si no es exitoso, verifica con los datos predefinidos
+
             else if (email == predefinedEmail && password == predefinedPassword) {
                 loginUser(email, password)
             }

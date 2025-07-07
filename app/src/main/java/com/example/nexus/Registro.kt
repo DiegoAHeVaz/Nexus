@@ -20,7 +20,7 @@ class Registro : AppCompatActivity() {
     private lateinit var radioGroupImproveWithNexus: RadioGroup
     private lateinit var radioGroupCellphoneImpact: RadioGroup
 
-    // Variables para almacenar la información
+
     private var userEmail: String? = null
     private var userPassword: String? = null
     private var userName: String? = null
@@ -34,7 +34,6 @@ class Registro : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.registro)
 
-        // Inicialización
         emailInput = findViewById(R.id.editTextEmail)
         passwordInput = findViewById(R.id.editTextPassword)
         nameInput = findViewById(R.id.editTextName)
@@ -49,7 +48,6 @@ class Registro : AppCompatActivity() {
             val password = passwordInput.text.toString().trim()
             val name = nameInput.text.toString().trim()
 
-            // Validaciones básicas
             if (email.isEmpty() || password.isEmpty() || name.isEmpty()) {
                 Toast.makeText(this, "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -60,7 +58,7 @@ class Registro : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // Validar selección de radios
+
             if (radioGroupDiagnosis.checkedRadioButtonId == -1 ||
                 radioGroupConcentration.checkedRadioButtonId == -1 ||
                 radioGroupImproveWithNexus.checkedRadioButtonId == -1 ||
@@ -70,13 +68,13 @@ class Registro : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // Obtener textos seleccionados
+
             val selectedDiagnosis = findViewById<RadioButton>(radioGroupDiagnosis.checkedRadioButtonId).text.toString()
             val selectedConcentration = findViewById<RadioButton>(radioGroupConcentration.checkedRadioButtonId).text.toString()
             val selectedImproveWithNexus = findViewById<RadioButton>(radioGroupImproveWithNexus.checkedRadioButtonId).text.toString()
             val selectedCellphoneImpact = findViewById<RadioButton>(radioGroupCellphoneImpact.checkedRadioButtonId).text.toString()
 
-            // Guardar los datos en variables
+
             userEmail = email
             userPassword = password
             userName = name
@@ -93,7 +91,7 @@ class Registro : AppCompatActivity() {
             editor.putString("username", name)
             editor.apply()
 
-            // Iniciar MainActivity
+
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
